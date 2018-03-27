@@ -1,0 +1,31 @@
+#include <iostream>
+#include<cmath>
+#include <iomanip>
+using namespace std;
+ float factoryal(int);
+int main(){
+    cout << "Enter the value of x : ";
+    int x;
+    double value=0;
+    cin >> x;
+    for(int i=0 ; i<100 ; i++){
+            if(i%10==0)
+              cout << endl;
+    value+=pow(x,i)/factoryal(i);
+    cout<< setw(10)<< setfill(' ') <<value<<" ";
+
+    }
+    cout << endl << value << endl;
+    cout << "The result from the built in function : " << exp(x);
+    return 0;
+}
+ float factoryal(int x){
+    int i;
+     float result=x;
+    if(x==0) return 1;
+    for(i=x-1 ; i>0 ;i--){
+        result*=i;
+    }
+        return result;
+    }
+
